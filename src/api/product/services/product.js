@@ -1,9 +1,16 @@
-'use strict';
+"use strict";
 
-/**
- * product service
- */
+module.exports = {
+  async customServiceMethod(params) {
+    console.log("Received parameters in service method:", params);
+    return { message: "Custom service method executed", params };
+  },
 
-const { createCoreService } = require('@strapi/strapi').factories;
-
-module.exports = createCoreService('api::product.product');
+  async customFindMethod(params) {
+    const results = await strapi.query("api::product.product").findMany(params);
+    results.forEach((result) => {
+      result.tailor = "Aimen"; // adding custom field to each result
+    });
+    return results;
+  },
+};

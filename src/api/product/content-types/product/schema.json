@@ -4,7 +4,8 @@
   "info": {
     "singularName": "product",
     "pluralName": "products",
-    "displayName": "product"
+    "displayName": "product",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,6 +17,12 @@
       "required": true,
       "maxLength": 71,
       "minLength": 3
+    },
+    "price": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "blocks"
     }
   }
 }

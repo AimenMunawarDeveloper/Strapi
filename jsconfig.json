@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
-    "moduleResolution": "nodenext",
-    "target": "ES2021",
-    "checkJs": true,
-    "allowJs": true
+    "moduleResolution": "nodenext",   // Use nodenext for Node.js module resolution
+    "module": "nodenext",             // Align the module option with moduleResolution
+    "target": "ES2021",               // Target ES2021 for modern JavaScript features
+    "checkJs": true,                  // Enable error checking in JavaScript files
+    "allowJs": true,                  // Allow JavaScript files in the project
+    "jsx": "react-jsx"                // Enable JSX support for React components
   }
 }
